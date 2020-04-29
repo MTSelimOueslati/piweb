@@ -1,0 +1,15 @@
+esprit_api:
+    resource: "@EspritApiBundle/Resources/config/routing.yml"
+    prefix:   /esprit
+
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+associations:
+    resource: "@AssociationsBundle/Resources/config/routing.yml"
+    prefix:   /associations
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

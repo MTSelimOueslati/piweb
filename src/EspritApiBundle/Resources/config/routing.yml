@@ -1,0 +1,28 @@
+esprit_api_homepage:
+    path:     /
+    defaults: { _controller: EspritApiBundle:Default:index }
+
+all:
+    path:   /tasks/all
+    defaults: { _controller: EspritApiBundle:EspritApi:all }
+
+find_task:
+    path:   /tasks/find/{id}
+    defaults: {_controller: EspritApiBundle:EspritApi:find}
+
+create_task:
+    path: /tasks/new
+    defaults: {_controller: EspritApiBundle:EspritApi:new}
+
+create_association:
+    path: /tasks/newAssociation
+    defaults: {_controller: EspritApiBundle:EspritApi:newAssociation}
+
+
+all_associations:
+    path:   /tasks/allAssociations
+    defaults: { _controller: EspritApiBundle:EspritApi:allAssociations }
+
+find_association:
+    path:   /tasks/findAssociation/{id}
+    defaults: {_controller: EspritApiBundle:EspritApi:findAssociation}
