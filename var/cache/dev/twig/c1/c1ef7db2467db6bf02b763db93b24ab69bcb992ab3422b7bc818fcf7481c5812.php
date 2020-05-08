@@ -70,7 +70,7 @@ class __TwigTemplate_c6496fc167b20ba77a03076453d3199fa7d5bf6e67016563f18640b8ef9
         // line 7
         echo twig_escape_filter($this->env, sprintf("%.1f", (($this->getAttribute(($context["collector"] ?? $this->getContext($context, "collector")), "memory", []) / 1024) / 1024)), "html", null, true);
         echo "</span>
-        <span class=\"sf-toolbar-label\">MB</span>
+        <span class=\"sf-toolbar-label\">MiB</span>
     ";
         $context["icon"] = ('' === $tmp = ob_get_clean()) ? '' : new Markup($tmp, $this->env->getCharset());
         // line 10
@@ -84,14 +84,14 @@ class __TwigTemplate_c6496fc167b20ba77a03076453d3199fa7d5bf6e67016563f18640b8ef9
             <span>";
         // line 14
         echo twig_escape_filter($this->env, sprintf("%.1f", (($this->getAttribute(($context["collector"] ?? $this->getContext($context, "collector")), "memory", []) / 1024) / 1024)), "html", null, true);
-        echo " MB</span>
+        echo " MiB</span>
         </div>
 
         <div class=\"sf-toolbar-info-piece\">
             <b>PHP memory limit</b>
             <span>";
         // line 19
-        ((($this->getAttribute(($context["collector"] ?? $this->getContext($context, "collector")), "memoryLimit", []) ==  -1)) ? (print ("Unlimited")) : (print (twig_escape_filter($this->env, sprintf("%.0f MB", (($this->getAttribute(($context["collector"] ?? $this->getContext($context, "collector")), "memoryLimit", []) / 1024) / 1024)), "html", null, true))));
+        ((($this->getAttribute(($context["collector"] ?? $this->getContext($context, "collector")), "memoryLimit", []) ==  -1)) ? (print ("Unlimited")) : (print (twig_escape_filter($this->env, sprintf("%.0f MiB", (($this->getAttribute(($context["collector"] ?? $this->getContext($context, "collector")), "memoryLimit", []) / 1024) / 1024)), "html", null, true))));
         echo "</span>
         </div>
     ";
@@ -143,18 +143,18 @@ class __TwigTemplate_c6496fc167b20ba77a03076453d3199fa7d5bf6e67016563f18640b8ef9
         {% set status_color = (collector.memory / 1024 / 1024) > 50 ? 'yellow' : '' %}
         {{ include('@WebProfiler/Icon/memory.svg') }}
         <span class=\"sf-toolbar-value\">{{ '%.1f'|format(collector.memory / 1024 / 1024) }}</span>
-        <span class=\"sf-toolbar-label\">MB</span>
+        <span class=\"sf-toolbar-label\">MiB</span>
     {% endset %}
 
     {% set text %}
         <div class=\"sf-toolbar-info-piece\">
             <b>Peak memory usage</b>
-            <span>{{ '%.1f'|format(collector.memory / 1024 / 1024) }} MB</span>
+            <span>{{ '%.1f'|format(collector.memory / 1024 / 1024) }} MiB</span>
         </div>
 
         <div class=\"sf-toolbar-info-piece\">
             <b>PHP memory limit</b>
-            <span>{{ collector.memoryLimit == -1 ? 'Unlimited' : '%.0f MB'|format(collector.memoryLimit / 1024 / 1024) }}</span>
+            <span>{{ collector.memoryLimit == -1 ? 'Unlimited' : '%.0f MiB'|format(collector.memoryLimit / 1024 / 1024) }}</span>
         </div>
     {% endset %}
 

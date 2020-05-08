@@ -200,7 +200,7 @@ class __TwigTemplate_4c21d33e159f2e8eeec5197f5a7ce151953dc645c041fa76799ab2bff83
                 <span class=\"value\">";
             // line 67
             echo twig_escape_filter($this->env, sprintf("%.2f", (($this->getAttribute($this->getAttribute($this->getAttribute(($context["profile"] ?? $this->getContext($context, "profile")), "collectors", []), "memory", []), "memory", []) / 1024) / 1024)), "html", null, true);
-            echo " <span class=\"unit\">MB</span></span>
+            echo " <span class=\"unit\">MiB</span></span>
                 <span class=\"label\">Peak memory usage</span>
             </div>
         ";
@@ -648,7 +648,7 @@ class __TwigTemplate_4c21d33e159f2e8eeec5197f5a7ce151953dc645c041fa76799ab2bff83
                     ctx.fillStyle = \"#444\";
                     ctx.font = \"12px sans-serif\";
                     text = event.name;
-                    ms = \"  \" + (event.duration < 1 ? event.duration : parseInt(event.duration, 10)) + \" ms / \" + event.memory + \" MB\";
+                    ms = \"  \" + (event.duration < 1 ? event.duration : parseInt(event.duration, 10)) + \" ms / \" + event.memory + \" MiB\";
                     if (x + event.starttime * ratio + ctx.measureText(text + ms).width > width) {
                         ctx.textAlign = \"end\";
                         ctx.font = \"10px sans-serif\";
@@ -843,7 +843,7 @@ class __TwigTemplate_4c21d33e159f2e8eeec5197f5a7ce151953dc645c041fa76799ab2bff83
             $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "macro", "dump_request_data"));
 
             // line 513
-            $context["__internal_c0f1a48f700124002ea05b7f418c981e388f8465386ea49d51c5f279e00ae239"] = $this;
+            $context["__internal_8b4ae074f25670f219a58139f21fb0462780b0ade6b7a5b966c6f368c1b68641"] = $this;
             // line 514
             echo "                {
                     \"id\": \"";
@@ -857,7 +857,7 @@ class __TwigTemplate_4c21d33e159f2e8eeec5197f5a7ce151953dc645c041fa76799ab2bff83
                     \"events\": [
 ";
             // line 518
-            echo $context["__internal_c0f1a48f700124002ea05b7f418c981e388f8465386ea49d51c5f279e00ae239"]->getdump_events(($context["events"] ?? $this->getContext($context, "events")));
+            echo $context["__internal_8b4ae074f25670f219a58139f21fb0462780b0ade6b7a5b966c6f368c1b68641"]->getdump_events(($context["events"] ?? $this->getContext($context, "events")));
             echo "
                     ]
                 }
@@ -1181,7 +1181,7 @@ class __TwigTemplate_4c21d33e159f2e8eeec5197f5a7ce151953dc645c041fa76799ab2bff83
 
         {% if profile.collectors.memory %}
             <div class=\"metric\">
-                <span class=\"value\">{{ '%.2f'|format(profile.collectors.memory.memory / 1024 / 1024) }} <span class=\"unit\">MB</span></span>
+                <span class=\"value\">{{ '%.2f'|format(profile.collectors.memory.memory / 1024 / 1024) }} <span class=\"unit\">MiB</span></span>
                 <span class=\"label\">Peak memory usage</span>
             </div>
         {% endif %}
@@ -1503,7 +1503,7 @@ class __TwigTemplate_4c21d33e159f2e8eeec5197f5a7ce151953dc645c041fa76799ab2bff83
                     ctx.fillStyle = \"#444\";
                     ctx.font = \"12px sans-serif\";
                     text = event.name;
-                    ms = \"  \" + (event.duration < 1 ? event.duration : parseInt(event.duration, 10)) + \" ms / \" + event.memory + \" MB\";
+                    ms = \"  \" + (event.duration < 1 ? event.duration : parseInt(event.duration, 10)) + \" ms / \" + event.memory + \" MiB\";
                     if (x + event.starttime * ratio + ctx.measureText(text + ms).width > width) {
                         ctx.textAlign = \"end\";
                         ctx.font = \"10px sans-serif\";
