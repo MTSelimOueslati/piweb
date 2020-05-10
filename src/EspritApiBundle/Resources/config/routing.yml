@@ -26,3 +26,7 @@ all_associations:
 find_association:
     path:   /tasks/findAssociation/{id}
     defaults: {_controller: EspritApiBundle:EspritApi:findAssociation}
+
+create_user:
+    path:   /tasks/newUser
+    defaults: { _controller: EspritApiBundle:EspritApi:newUser }

@@ -160,6 +160,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return array (  '_controller' => 'EspritApiBundle\\Controller\\EspritApiController::newAssociationAction',  '_route' => 'create_association',);
                 }
 
+                // create_user
+                if ('/esprit/tasks/newUser' === $pathinfo) {
+                    return array (  '_controller' => 'EspritApiBundle\\Controller\\EspritApiController::newUserAction',  '_route' => 'create_user',);
+                }
+
             }
 
         }

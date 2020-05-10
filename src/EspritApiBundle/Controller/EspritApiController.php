@@ -3,6 +3,7 @@
 namespace EspritApiBundle\Controller;
 
 
+use AppBundle\Entity\User;
 use AssociationsBundle\Entity\Association;
 use EspritApiBundle\Entity\Task;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -10,6 +11,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\Encoder\BCryptPasswordEncoder;
 
 class EspritApiController extends Controller
 {
@@ -75,6 +77,28 @@ class EspritApiController extends Controller
             ->find($id);
         $serializer = new Serializer([new ObjectNormalizer()]);
         $formatted = $serializer->normalize($association);
+        return new JsonResponse($formatted);
+    }
+
+
+
+    public function newUserAction(Request $request){
+
+        $em = $this->getDoctrine()->getManager();
+        $user = new User();
+        $user->setUsername($request->get('username'));
+        $user->setUsernameCanonical($request->get('username'));
+        $user->setEmail($request->get('email'));
+        $user->setEmailCanonical($request->get('email'));
+        $user->setPassword($request->get('password'));
+        $user->setEnabled("1");
+        $bcrypt = new BCryptPasswordEncoder(13);
+        $pwd = $bcrypt->encodePassword($user->getPassword(), 10);
+        $user->setPassword($pwd);
+        $em->persist($user);
+        $em->flush();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($user);
         return new JsonResponse($formatted);
     }
 
