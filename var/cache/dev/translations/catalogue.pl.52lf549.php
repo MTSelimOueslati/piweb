@@ -202,6 +202,18 @@ Zespół.
     'form.new_password' => 'Nowe hasło',
     'form.new_password_confirmation' => 'Powtórz hasło',
   ),
+  'HWIOAuthBundle' => 
+  array (
+    'header.connecting' => 'Łączenie',
+    'header.success' => 'Łączenie konta "%name%" zakończone sukcesem!',
+    'header.register' => 'Zarejestruj się korzystając z konta "%name%"',
+    'header.registration_success' => 'Rejestracja oraz łączenie konta "%username%" zakończone sukcesem!',
+    'connect.confirm.cancel' => 'Anuluj',
+    'connect.confirm.submit' => 'Połącz konta',
+    'connect.confirm.text' => 'Czy jesteś pewny, że chcesz połączyć %service% "%name%" ze swoim kontem?',
+    'connect.registration.cancel' => 'Anuluj',
+    'connect.registration.submit' => 'Zarejestruj konto',
+  ),
 ));
 
 $catalogueEn = new MessageCatalogue('en', array (
@@ -407,6 +419,18 @@ the Team.
     'form.password_confirmation' => 'Repeat password',
     'form.new_password' => 'New password',
     'form.new_password_confirmation' => 'Repeat new password',
+  ),
+  'HWIOAuthBundle' => 
+  array (
+    'header.connecting' => 'Connecting',
+    'header.success' => 'Successfully connected the account "%name%"!',
+    'header.register' => 'Register with the account "%name%"',
+    'header.registration_success' => 'Successfully registered and connected the account "%username%"!',
+    'connect.confirm.cancel' => 'Cancel',
+    'connect.confirm.submit' => 'Connect account',
+    'connect.confirm.text' => 'Are you sure that you want to connect your %service% account "%name%" to your current account?',
+    'connect.registration.cancel' => 'Cancel',
+    'connect.registration.submit' => 'Register account',
   ),
 ));
 $catalogue->addFallbackCatalogue($catalogueEn);

@@ -193,6 +193,18 @@ $catalogue = new MessageCatalogue('fa', array (
     'form.new_password' => 'کلمه عبور جدید',
     'form.new_password_confirmation' => 'تکرار کلمه عبور جدید',
   ),
+  'HWIOAuthBundle' => 
+  array (
+    'header.connecting' => 'در حال برقراری ارتباط',
+    'header.success' => 'ارتباط با حساب \'%name%\' با موفقیت برقرار شد!',
+    'header.register' => 'با حساب \'%name%\' ثبت نام کنید',
+    'header.registration_success' => 'ثبت با با موفقیت انجام شد و به حساب \'%username%\' متصل شد!',
+    'connect.confirm.cancel' => 'انصراف',
+    'connect.confirm.submit' => 'متصل کردن حساب',
+    'connect.confirm.text' => 'آیا مطمئن هستید که می‌خواهید حساب %service% با نام \'%name%\' را به حساب کنونی خود متصل کنید?',
+    'connect.registration.cancel' => 'انصراف',
+    'connect.registration.submit' => 'ثبت نام',
+  ),
 ));
 
 $catalogueEn = new MessageCatalogue('en', array (
@@ -398,6 +410,18 @@ the Team.
     'form.password_confirmation' => 'Repeat password',
     'form.new_password' => 'New password',
     'form.new_password_confirmation' => 'Repeat new password',
+  ),
+  'HWIOAuthBundle' => 
+  array (
+    'header.connecting' => 'Connecting',
+    'header.success' => 'Successfully connected the account "%name%"!',
+    'header.register' => 'Register with the account "%name%"',
+    'header.registration_success' => 'Successfully registered and connected the account "%username%"!',
+    'connect.confirm.cancel' => 'Cancel',
+    'connect.confirm.submit' => 'Connect account',
+    'connect.confirm.text' => 'Are you sure that you want to connect your %service% account "%name%" to your current account?',
+    'connect.registration.cancel' => 'Cancel',
+    'connect.registration.submit' => 'Register account',
   ),
 ));
 $catalogue->addFallbackCatalogue($catalogueEn);

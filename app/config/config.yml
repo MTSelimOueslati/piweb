@@ -83,3 +83,13 @@ fos_user:
     from_email:
         address: "test@test.com"
         sender_name: "test a"
+
+hwi_oauth:
+    firewall_name: [secured_area]
+    resource_owners:
+        any_name:
+            type:                facebook
+            client_id:           1654896674667347
+            client_secret:       27804c48ab2159991982e49a70acbf68
+            scope: "email"
+

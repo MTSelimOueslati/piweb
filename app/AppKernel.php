@@ -20,6 +20,8 @@ class AppKernel extends Kernel
             new AssociationsBundle\AssociationsBundle(),
             new EspritApiBundle\EspritApiBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new Http\HttplugBundle\HttplugBundle(),
+            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
 
         ];
 

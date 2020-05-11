@@ -189,6 +189,18 @@ $catalogue = new MessageCatalogue('zh_CN', array (
 ));
 
 $catalogueZh = new MessageCatalogue('zh', array (
+  'HWIOAuthBundle' => 
+  array (
+    'header.connecting' => '正在关联',
+    'header.success' => '成功关联“%name%”帐号！',
+    'header.register' => '注册“%name%”帐号',
+    'header.registration_success' => '成功注册并关联“%username%”的帐号！',
+    'connect.confirm.cancel' => '取消',
+    'connect.confirm.submit' => '关联帐号',
+    'connect.confirm.text' => '你确定要将%service%上的帐号“%name%”与当前帐号关联吗？',
+    'connect.registration.cancel' => '取消',
+    'connect.registration.submit' => '注册帐号',
+  ),
 ));
 $catalogue->addFallbackCatalogue($catalogueZh);
 $catalogueEn = new MessageCatalogue('en', array (
@@ -394,6 +406,18 @@ the Team.
     'form.password_confirmation' => 'Repeat password',
     'form.new_password' => 'New password',
     'form.new_password_confirmation' => 'Repeat new password',
+  ),
+  'HWIOAuthBundle' => 
+  array (
+    'header.connecting' => 'Connecting',
+    'header.success' => 'Successfully connected the account "%name%"!',
+    'header.register' => 'Register with the account "%name%"',
+    'header.registration_success' => 'Successfully registered and connected the account "%username%"!',
+    'connect.confirm.cancel' => 'Cancel',
+    'connect.confirm.submit' => 'Connect account',
+    'connect.confirm.text' => 'Are you sure that you want to connect your %service% account "%name%" to your current account?',
+    'connect.registration.cancel' => 'Cancel',
+    'connect.registration.submit' => 'Register account',
   ),
 ));
 $catalogueZh->addFallbackCatalogue($catalogueEn);

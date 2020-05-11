@@ -192,6 +192,18 @@ Web Takımı.
     'form.new_password' => 'Yeni parola',
     'form.new_password_confirmation' => 'Yeni parola tekrar',
   ),
+  'HWIOAuthBundle' => 
+  array (
+    'header.connecting' => 'Bağlan',
+    'header.success' => 'Başarı ile "%name%" hesabına bağlanıldı!',
+    'header.register' => '"%name%" üyeliğim ile kayıt ol',
+    'header.registration_success' => '"%username%" başarı ile kayıt oldunuz ve bağlandınız!',
+    'connect.confirm.cancel' => 'İptal',
+    'connect.confirm.submit' => 'Üyeliğim ile bağlan',
+    'connect.confirm.text' => '%service% üzerinden "%name%" ile bağlanmak istediğinize emin misiniz?',
+    'connect.registration.cancel' => 'İptal',
+    'connect.registration.submit' => 'Hesabımı kaydet',
+  ),
 ));
 
 $catalogueEn = new MessageCatalogue('en', array (
@@ -397,6 +409,18 @@ the Team.
     'form.password_confirmation' => 'Repeat password',
     'form.new_password' => 'New password',
     'form.new_password_confirmation' => 'Repeat new password',
+  ),
+  'HWIOAuthBundle' => 
+  array (
+    'header.connecting' => 'Connecting',
+    'header.success' => 'Successfully connected the account "%name%"!',
+    'header.register' => 'Register with the account "%name%"',
+    'header.registration_success' => 'Successfully registered and connected the account "%username%"!',
+    'connect.confirm.cancel' => 'Cancel',
+    'connect.confirm.submit' => 'Connect account',
+    'connect.confirm.text' => 'Are you sure that you want to connect your %service% account "%name%" to your current account?',
+    'connect.registration.cancel' => 'Cancel',
+    'connect.registration.submit' => 'Register account',
   ),
 ));
 $catalogue->addFallbackCatalogue($catalogueEn);

@@ -205,6 +205,18 @@ a Csapat.
     'form.new_password' => 'Új jelszó',
     'form.new_password_confirmation' => 'Új jelszó megerősítése',
   ),
+  'HWIOAuthBundle' => 
+  array (
+    'header.connecting' => 'Kapcsolódás',
+    'header.success' => 'A(z) "%name%" fiók sikeresen csatlakoztatva!',
+    'header.register' => 'Regisztrálás a(z) "%name%" fiók névvel',
+    'header.registration_success' => 'A(z) "%username%" fiók sikeresen regisztrálva és csatlakoztatva!',
+    'connect.confirm.cancel' => 'Mégsem',
+    'connect.confirm.submit' => 'Fiók csatlakoztatása',
+    'connect.confirm.text' => 'Biztos csatlakoztatni szeretné a(z) %service% "%name%" fiókját a jelenlegihez?',
+    'connect.registration.cancel' => 'Mégsem',
+    'connect.registration.submit' => 'Fiók regisztrálása',
+  ),
 ));
 
 $catalogueEn = new MessageCatalogue('en', array (
@@ -410,6 +422,18 @@ the Team.
     'form.password_confirmation' => 'Repeat password',
     'form.new_password' => 'New password',
     'form.new_password_confirmation' => 'Repeat new password',
+  ),
+  'HWIOAuthBundle' => 
+  array (
+    'header.connecting' => 'Connecting',
+    'header.success' => 'Successfully connected the account "%name%"!',
+    'header.register' => 'Register with the account "%name%"',
+    'header.registration_success' => 'Successfully registered and connected the account "%username%"!',
+    'connect.confirm.cancel' => 'Cancel',
+    'connect.confirm.submit' => 'Connect account',
+    'connect.confirm.text' => 'Are you sure that you want to connect your %service% account "%name%" to your current account?',
+    'connect.registration.cancel' => 'Cancel',
+    'connect.registration.submit' => 'Register account',
   ),
 ));
 $catalogue->addFallbackCatalogue($catalogueEn);

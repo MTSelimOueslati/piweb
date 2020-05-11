@@ -169,6 +169,47 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        elseif (0 === strpos($pathinfo, '/connect')) {
+            // hwi_oauth_service_redirect
+            if (preg_match('#^/connect/(?P<service>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'hwi_oauth_service_redirect']), array (  '_controller' => 'HWI\\Bundle\\OAuthBundle\\Controller\\ConnectController::redirectToServiceAction',));
+            }
+
+            // hwi_oauth_connect_service
+            if (0 === strpos($pathinfo, '/connect/service') && preg_match('#^/connect/service/(?P<service>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'hwi_oauth_connect_service']), array (  '_controller' => 'HWI\\Bundle\\OAuthBundle\\Controller\\ConnectController::connectServiceAction',));
+            }
+
+            // hwi_oauth_connect_registration
+            if (0 === strpos($pathinfo, '/connect/registration') && preg_match('#^/connect/registration/(?P<key>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'hwi_oauth_connect_registration']), array (  '_controller' => 'HWI\\Bundle\\OAuthBundle\\Controller\\ConnectController::registrationAction',));
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/login')) {
+            // hwi_oauth_connect
+            if ('/login' === $trimmedPathinfo) {
+                $ret = array (  '_controller' => 'HWI\\Bundle\\OAuthBundle\\Controller\\ConnectController::connectAction',  '_route' => 'hwi_oauth_connect',);
+                if ('/' === substr($pathinfo, -1)) {
+                    // no-op
+                } elseif ('GET' !== $canonicalMethod) {
+                    goto not_hwi_oauth_connect;
+                } else {
+                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'hwi_oauth_connect'));
+                }
+
+                return $ret;
+            }
+            not_hwi_oauth_connect:
+
+            // facebook_login
+            if ('/login/check-facebook' === $pathinfo) {
+                return ['_route' => 'facebook_login'];
+            }
+
+        }
+
         elseif (0 === strpos($pathinfo, '/associations')) {
             // associations_homepage
             if ('/associations' === $trimmedPathinfo) {
