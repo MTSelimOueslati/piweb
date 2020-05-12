@@ -1,4 +1,3 @@
-4688df,::1,GET,http://localhost/piweb/web/app_dev.php/connect/facebook,1589233503,59151e,200
-59151e,::1,GET,http://localhost/piweb/web/app_dev.php/connect/facebook,1589233503,,404
-239876,::1,GET,http://localhost/piweb/web/app_dev.php/connect/facebook,1589235492,610d29,200
-610d29,::1,GET,http://localhost/piweb/web/app_dev.php/connect/facebook,1589235492,,404
+d80be4,::1,GET,http://localhost/piweb/web/app_dev.php/connect/facebook,1589243044,,302
+24c00a,::1,GET,http://localhost/piweb/web/app_dev.php/login/check-facebook?code=AQBLco6eP9s9402WziM19Vov3m_JOefmzep5ANm6fqEyn9IwTgr-EyfmF_I6h2dK88NiEkktsWtpdQrFoJpbH37vkeajpoU2kMoGSm4mJ4KjKt6ujRVgL0YIqFO2GxJfcGK5Hp-hWn2zbQVP_o-B-sUi0GJoEmxTZOFKXDFd6AxAKBZA5QTCmgvfboYPX2y6PDd5C07-kx72zqxao8G4zo1EWxOez8Ac6LKCxTpnBssEUBczuzXmXAvLFRQK7mMATfw6RRdDUmmsFDpPjPOX95A9T6y11lX9XP_4fUW8GtFkw-KVT_5xp6E0rXi2ZsazfR8m_zgoQbbZO8ln9AU2h91l,1589243052,bd25e5,200
+bd25e5,::1,GET,http://localhost/piweb/web/app_dev.php/login/check-facebook?code=AQBLco6eP9s9402WziM19Vov3m_JOefmzep5ANm6fqEyn9IwTgr-EyfmF_I6h2dK88NiEkktsWtpdQrFoJpbH37vkeajpoU2kMoGSm4mJ4KjKt6ujRVgL0YIqFO2GxJfcGK5Hp-hWn2zbQVP_o-B-sUi0GJoEmxTZOFKXDFd6AxAKBZA5QTCmgvfboYPX2y6PDd5C07-kx72zqxao8G4zo1EWxOez8Ac6LKCxTpnBssEUBczuzXmXAvLFRQK7mMATfw6RRdDUmmsFDpPjPOX95A9T6y11lX9XP_4fUW8GtFkw-KVT_5xp6E0rXi2ZsazfR8m_zgoQbbZO8ln9AU2h91l,1589243052,,404
