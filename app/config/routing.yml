@@ -17,6 +17,8 @@ hwi_oauth_login:
 facebook_login:
     path: /login/check-facebook
 
+logout:
+    path: /logout
 
 associations:
     resource: "@AssociationsBundle/Resources/config/routing.yml"

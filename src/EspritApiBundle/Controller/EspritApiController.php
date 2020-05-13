@@ -102,4 +102,42 @@ class EspritApiController extends Controller
         return new JsonResponse($formatted);
     }
 
+    public function allUsersAction(){
+        $user = $this->getDoctrine()->getManager()
+            ->getRepository('AppBundle:User')
+            ->findAll();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($user);
+        return new JsonResponse($formatted);
+    }
+
+
+
+    public function VerifUsersAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        /* get les username et password */
+        $username = $request->get('username');
+        $password = $request->get('password');
+        $query = $em->createQuery(
+            'SELECT u.password 
+    FROM AppBundle:User u
+    WHERE u.username = :username '
+        )->setParameter('username', $username);
+        $users = $query->getResult();
+        /* serialize mdp affiché par la requéte */
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $json = $users[0]['password'];
+        $bcrypt = new BCryptPasswordEncoder(13);
+        $test = $bcrypt->isPasswordValid($json, $password, 10);
+        if ($test == true) {
+            $formatted = $serializer->normalize($users);
+            return new JsonResponse($users);
+        } /* crypter et test */
+        else {
+            $users[0]['password'] = "faux";
+            $formatted = $serializer->normalize($users);
+            return new JsonResponse($users);
+        }
+    }
 }

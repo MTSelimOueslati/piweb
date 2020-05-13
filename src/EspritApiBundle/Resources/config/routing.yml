@@ -30,3 +30,11 @@ find_association:
 create_user:
     path:   /tasks/newUser
     defaults: { _controller: EspritApiBundle:EspritApi:newUser }
+
+all_users:
+    path:   /tasks/allUsers
+    defaults: { _controller: EspritApiBundle:EspritApi:allUsers }
+
+verif_user:
+    path:   /tasks/VerifUsers
+    defaults: { _controller: EspritApiBundle:EspritApi:VerifUsers }

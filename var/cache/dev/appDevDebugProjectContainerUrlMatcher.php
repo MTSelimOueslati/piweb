@@ -134,6 +134,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return array (  '_controller' => 'EspritApiBundle\\Controller\\EspritApiController::allAssociationsAction',  '_route' => 'all_associations',);
                 }
 
+                // all_users
+                if ('/esprit/tasks/allUsers' === $pathinfo) {
+                    return array (  '_controller' => 'EspritApiBundle\\Controller\\EspritApiController::allUsersAction',  '_route' => 'all_users',);
+                }
+
             }
 
             elseif (0 === strpos($pathinfo, '/esprit/tasks/find')) {
@@ -165,6 +170,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return array (  '_controller' => 'EspritApiBundle\\Controller\\EspritApiController::newUserAction',  '_route' => 'create_user',);
                 }
 
+            }
+
+            // verif_user
+            if ('/esprit/tasks/VerifUsers' === $pathinfo) {
+                return array (  '_controller' => 'EspritApiBundle\\Controller\\EspritApiController::VerifUsersAction',  '_route' => 'verif_user',);
             }
 
         }
@@ -210,7 +220,12 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        elseif (0 === strpos($pathinfo, '/associations')) {
+        // logout
+        if ('/logout' === $pathinfo) {
+            return ['_route' => 'logout'];
+        }
+
+        if (0 === strpos($pathinfo, '/associations')) {
             // associations_homepage
             if ('/associations' === $trimmedPathinfo) {
                 $ret = array (  '_controller' => 'AssociationsBundle\\Controller\\DefaultController::indexAction',  '_route' => 'associations_homepage',);
