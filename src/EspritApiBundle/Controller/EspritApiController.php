@@ -91,6 +91,7 @@ class EspritApiController extends Controller
         $user->setEmail($request->get('email'));
         $user->setEmailCanonical($request->get('email'));
         $user->setPassword($request->get('password'));
+        $user->setTel($request->get('tel'));
         $user->setEnabled("1");
         $bcrypt = new BCryptPasswordEncoder(13);
         $pwd = $bcrypt->encodePassword($user->getPassword(), 10);
