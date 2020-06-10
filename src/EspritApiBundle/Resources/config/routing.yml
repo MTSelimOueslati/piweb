@@ -38,3 +38,7 @@ all_users:
 verif_user:
     path:   /tasks/VerifUsers
     defaults: { _controller: EspritApiBundle:EspritApi:VerifUsers }
+
+find_user:
+    path:   /tasks/updateUser/
+    defaults: {_controller: EspritApiBundle:EspritApi:updateUser}

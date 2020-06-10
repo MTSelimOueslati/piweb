@@ -22,6 +22,7 @@
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
       <parameter key="HttplugBundle">Http\HttplugBundle\HttplugBundle</parameter>
       <parameter key="HWIOAuthBundle">HWI\Bundle\OAuthBundle\HWIOAuthBundle</parameter>
+      <parameter key="QcmBundle">QcmBundle\QcmBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -93,6 +94,11 @@
         <parameter key="parent">null</parameter>
         <parameter key="path">C:\wamp64\www\piweb\vendor\hwi\oauth-bundle</parameter>
         <parameter key="namespace">HWI\Bundle\OAuthBundle</parameter>
+      </parameter>
+      <parameter key="QcmBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\wamp64\www\piweb\src\QcmBundle</parameter>
+        <parameter key="namespace">QcmBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
@@ -4138,6 +4144,14 @@
         <argument>!HWIOAuth</argument>
       </call>
       <call method="addPath">
+        <argument>C:\wamp64\www\piweb\src\QcmBundle/Resources/views</argument>
+        <argument>Qcm</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\piweb\src\QcmBundle/Resources/views</argument>
+        <argument>!Qcm</argument>
+      </call>
+      <call method="addPath">
         <argument>C:\wamp64\www\piweb\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>
         <argument>Debug</argument>
       </call>
@@ -4731,6 +4745,7 @@
           <argument key="AppBundle">AppBundle\Entity</argument>
           <argument key="AssociationsBundle">AssociationsBundle\Entity</argument>
           <argument key="EspritApiBundle">EspritApiBundle\Entity</argument>
+          <argument key="QcmBundle">QcmBundle\Entity</argument>
         </argument>
       </call>
       <call method="setMetadataCacheImpl">
@@ -4779,6 +4794,7 @@
         <argument>C:\wamp64\www\piweb\src\AppBundle\Entity</argument>
         <argument>C:\wamp64\www\piweb\src\AssociationsBundle\Entity</argument>
         <argument>C:\wamp64\www\piweb\src\EspritApiBundle\Entity</argument>
+        <argument>C:\wamp64\www\piweb\src\QcmBundle\Entity</argument>
       </argument>
     </service>
     <service id="doctrine.orm.default_metadata_driver" class="Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain" public="false">
@@ -4793,6 +4809,10 @@
       <call method="addDriver">
         <argument type="service" id="doctrine.orm.default_annotation_metadata_driver"/>
         <argument>EspritApiBundle\Entity</argument>
+      </call>
+      <call method="addDriver">
+        <argument type="service" id="doctrine.orm.default_annotation_metadata_driver"/>
+        <argument>QcmBundle\Entity</argument>
       </call>
       <call method="addDriver">
         <argument type="service">

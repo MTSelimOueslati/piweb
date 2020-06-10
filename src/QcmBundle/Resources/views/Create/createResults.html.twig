@@ -1,0 +1,26 @@
+{% extends 'base2.html.twig' %}
+{% block content %}
+
+    {% if success == false %}
+        <div class="panel panel-danger">
+            <div class="panel-heading">Erreur lors de la création de votre QCM</div>
+            <div class="panel-body">
+                {{ message }}
+            </div>
+        </div>
+    {% endif %}
+
+    {% if success == true %}
+        <div class="panel panel-success">
+            <div class="panel-heading">Info</div>
+            <div class="panel-body">
+                <br>
+                <br>
+                <br>
+                <br>
+               <center> Le QCM a été créé avec succès !</center>
+            </div>
+        </div>
+    {% endif %}
+
+{% endblock %}

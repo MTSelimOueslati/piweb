@@ -31,3 +31,23 @@ app:
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
     prefix: /user
+
+qcm:
+    resource: "@QcmBundle/Controller/DefaultController.php"
+    type:     annotation
+    prefix:   /
+
+qcmCreate:
+    resource: "@QcmBundle/Controller/CreateController.php"
+    type:     annotation
+    prefix:   /create
+
+qcmAnswer:
+    resource: "@QcmBundle/Controller/AnswerController.php"
+    type:     annotation
+    prefix:   /answer
+
+qcmResults:
+    resource: "@QcmBundle/Controller/ResultsController.php"
+    type:     annotation
+    prefix:   /results

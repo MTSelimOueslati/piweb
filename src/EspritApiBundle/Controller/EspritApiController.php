@@ -91,7 +91,27 @@ class EspritApiController extends Controller
         $user->setEmail($request->get('email'));
         $user->setEmailCanonical($request->get('email'));
         $user->setPassword($request->get('password'));
-        $user->setTel($request->get('tel'));
+        $user->setEnabled("1");
+        $bcrypt = new BCryptPasswordEncoder(13);
+        $pwd = $bcrypt->encodePassword($user->getPassword(), 10);
+        $user->setPassword($pwd);
+        $em->persist($user);
+        $em->flush();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($user);
+        return new JsonResponse($formatted);
+    }
+
+
+    public function updateUserAction(Request $request, int $id){
+
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository(User::class)->find($id);
+
+
+        $user->setEmail($request->get('email'));
+        $user->setEmailCanonical($request->get('email'));
+        $user->setPassword($request->get('password'));
         $user->setEnabled("1");
         $bcrypt = new BCryptPasswordEncoder(13);
         $pwd = $bcrypt->encodePassword($user->getPassword(), 10);
